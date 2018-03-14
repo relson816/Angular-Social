@@ -24,8 +24,21 @@ export class NoteDetailComponent {
     }
   }
 
+    disHeartToNote(val: number) {
+    if (this.note.id && (val > 0)) {
+      this.noteService.updateNote(this.note.id, { hearts: val - 1});
+    } else {
+      console.error('Note missing ID!');
+    }
+  }
+
   deleteNote(id: string) {
     this.noteService.deleteNote(id);
+  }
+
+  updateNote() {
+   // const date = new Date().getTime();
+    //this.noteSvc.updateItem(this.note.$key, { content: this.content });
   }
 
 }

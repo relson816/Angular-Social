@@ -14,8 +14,8 @@ export class ItemDetailComponent {
   constructor(private itemSvc: ItemService) { }
 
   updateTimeStamp() {
-    const date = new Date().getTime();
-    this.itemSvc.updateItem(this.item.$key, { timeStamp: date });
+   // const date = new Date().getTime();
+  //  this.itemSvc.updateItem(this.item.$key, { timeStamp: date });
   }
 
   updateActive(value: boolean) {
